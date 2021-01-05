@@ -1,0 +1,30 @@
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+  int n;
+  scanf("%d",&n);
+  int i=2;
+  int a=0,b=1;
+  if(n!=1)
+  {
+  printf("%d\n",a);
+  printf("%d\n",b);
+  }
+  else
+  {
+    printf("0");
+  }
+  while(i<n)
+  {
+    a=a+b;
+    printf("%d\n",a);
+    if(i<n-1)
+    {
+    b=a+b;
+    printf("%d\n",b);
+    }
+    i+=2;
+  }
+    return 0;
+}
