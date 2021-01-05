@@ -1,0 +1,28 @@
+int binaryToDecimal(int n)
+{
+  int sum1,sum=0;
+  int x,l,i=0;
+  int k=n;
+  int count=0;
+  while(k>0)
+  {
+    x=k%10;
+    k=k/10;
+    count++;
+  }
+  while(n>0)
+  {
+    x=n%10;
+    l=0;
+    sum1=1;
+    while(l!=i && i!=count)
+    {
+      sum1=sum1*2;
+      l++;
+    }
+    sum=sum+sum1*x;
+    n=n/10;
+    i++;
+  }
+  return sum;
+}
